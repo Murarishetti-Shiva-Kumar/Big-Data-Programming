@@ -6,9 +6,9 @@ Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki
 
 ICP 2:
 
-Source Code:
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/tree/main/ICP%202
 
-Wiki Page: 
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-2
 
 ICP 3:
 
