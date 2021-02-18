@@ -18,9 +18,9 @@ Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki
 
 ICP 4:
 
-Source Code:
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/blob/main/ICP%204/Queries.sql
 
-Wiki Page: 
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-4
 
 ICP 5:
 
