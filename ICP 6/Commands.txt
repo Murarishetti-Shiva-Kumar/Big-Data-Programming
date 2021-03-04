@@ -1,0 +1,127 @@
+//Generate instance for films
+solrctl instancedir --generate /tmp/films
+
+//Edit the schema.xml
+gedit /tmp/films/conf/schema.xml
+
+//content in schema.xml file
+   <field name="reviewerID" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+   <field name="asin" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="reviewerName" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="helpful" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="reviewText" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="overall" type="float" indexed="true" stored="true" multiValued="false" />
+   <field name="summary" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="unixReviewTime" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="reviewTime" type="string" indexed="true" stored="true" multiValued="false" />
+
+   <uniqueKey>reviewerID</uniqueKey>
+
+//uploading the contents of instance directory to Zookeeper
+solrctl instancedir --create films /tmp/films
+
+//creating new collection
+solrctl collection --create films
+
+//1.Searching a keyword “Michael” in the data set
+reviewerName:"Michael"
+
+//2.Searching a phrase in the dataset
+summary:"They Reduce Pop,Boom and Wind Noise"
+
+//3.Searching at a time for two different values using “and” operation
+asin:"B0018TAITA" AND overall:"5.0"
+
+//4.Performing AND & OR operation
+(asin:"B0018TAITA" AND overall:5.0) OR overall:4.0
+
+//Wildcard matching
+//1.Searching all instances of the keyword Michael in the name attribute
+reviewerName:Michael*
+
+//2.Returns all the instances where the reviewText string starts with “Not” and ends with “vibration”.
+reviewText:Not*vibration.
+
+//Proximity matching
+//1.Returns all records whose summary has good in the range of 4.
+summary:"good"~4
+
+//Boost
+//1.It gives importance to the attributes which has a boosting factor. The boosting factor taken in this case is 1.5 but in fact this is a variable factor it can be 2,3,5 etc.
+(asin:"B0018TAITA" OR asin:"A1HZRYGGNMOWRQ")^1.5 (overall:4.0 OR overall:5.0)
+
+//Range searches
+//1.Finds all the data whose overall rating is between 3 to 4 includes 3 and 4
+overall:[3 TO 4]
+
+//2.Finds all the data whose overall rating is less than or equal to 4
+overall:[* TO 4]
+
+//3.Finds all the data whose overall rating is greater than or equal to 4
+overall:[4 TO *]
+
+//4.Finds all the data whose overall rating is not equal to 5
+-overall:5.0
+
+//5.Returns all the data that contains the overall field
+overall:[* TO *]
+
+/Fuzzy logic
+//1.It gives all the results with the reviewer name like “daze”
+reviewerName:daze~
+
+//Generate instance for Books
+solrctl instancedir --generate /tmp/books
+
+//Edit the schema.xml
+gedit /tmp/books/conf/schema.xml
+
+//content in schema.xml file
+  <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+   <field name="catbook" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="pricebook" type="float" indexed="true" stored="true" multiValued="false" />
+   <field name="bookinStock" type="boolean" indexed="true" stored="true" multiValued="false" />
+   <field name="bookauthor" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="series_t" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="sequence_i" type="int" indexed="true" stored="true" multiValued="false" />
+   <field name="genre_s" type="string" indexed="true" stored="true" multiValued="false" />
+
+   <uniqueKey>id</uniqueKey>
+
+//uploading the contents of instance directory to Zookeepe
+solrctl instancedir --create books /tmp/books
+
+//creating new collection
+solrctl collection --create books
+
+//Sort
+//1.Gives the results of all the records with category book and pricebook in the descending order q=> “catbook”:”book” ; sort=> pricebook desc
+catbook:"book"
+
+//Filter
+//1.Returns the data with catbook like ”book” and pricebook equals to 7.99
+catbook:"book" pricebook:7.99
+
+//Fuzzy Logic
+//1.Returns the data that matches the genre_s: fantasy
+genre_s:fantasy~
+
+//2.Identifies if there are any books in stock
+bookinStock:true
+
+//3.Books with author name george
+bookauthor:George*
+
+//4.series_t exactly matches "A Song of Ice and Fire"
+series_t:"A Song of Ice and Fire"
+
+//Boost
+//1.Books which genre “scifi” or “fantasy” with a boosting factor and the pricebook with overall 7 or 8.
+(genre_s:"scifi" OR genre_s:"fantasy")^1.5 (pricebook:7.0 OR pricebook:8.0)
+
+//2.Books with price 5.99 and genre fantasy
+pricebook:5.99 AND genre_s:fantasy
+
+//Range
+//1.Books with price 3 to 8
+pricebook:[3 TO 8]
