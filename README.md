@@ -42,6 +42,42 @@ Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki
 
 ICP 8:
 
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/tree/main/ICP%208/ICP8
+
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-8
+
+ICP 9:
+
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/tree/main/ICP%209/ICP9
+
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-9
+
+ICP 10:
+
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/blob/main/ICP%2010/ICP10.ipynb
+
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-10
+
+ICP 11:
+
+Source Code:
+
+Wiki Page: 
+
+ICP 12:
+
+Source Code:
+
+Wiki Page: 
+
+ICP 13:
+
+Source Code:
+
+Wiki Page: 
+
+ICP 14:
+
 Source Code:
 
 Wiki Page: 
