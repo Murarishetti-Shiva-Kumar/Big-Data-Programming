@@ -26,8 +26,8 @@ retweeted.createOrReplaceTempView("user_retweeted")
 # Query to fetch top 20 highest followers count of verified users
 def get_query1():
     plt.clf()
-    # os.remove("Query2.csv")
-    # os.remove("graph2.png")
+    os.remove("Query2.csv")
+    os.remove("graph2.png")
     query_1 = spark.sql(
         "select name, followers_count from user where name is not null and verified=='true' order by followers_count DESC LIMIT 5")
     pd = query_1.toPandas()
@@ -50,7 +50,7 @@ def get_query3():
     # os.remove("Query3.csv")
     # os.remove("graph3.png")
     query_3 = spark.sql(
-        "select  t.Name,t.Retweeted_Count from(select user.screen_name as Name,SUM(retweet_count) as Retweeted_Count, count(*) from user_retweeted where user.screen_name is not null group by Name ) t order by Retweeted_Count DESC LIMIT 20")
+        "select  count(*) from user where description like %pfizer%")
     pd = query_3.toPandas()
     pd.to_csv('Query3.csv', index=False)
     x = pd.Name.tolist()
