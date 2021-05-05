@@ -60,24 +60,24 @@ Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki
 
 ICP 11:
 
-Source Code:
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/tree/main/ICP%2011/ICP11
 
-Wiki Page: 
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-11
 
 ICP 12:
 
-Source Code:
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/tree/main/ICP%2012/ICP%2012
 
-Wiki Page: 
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-12
 
 ICP 13:
 
-Source Code:
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/tree/main/ICP%2013/ICP%2013
 
-Wiki Page: 
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-13
 
 ICP 14:
 
-Source Code:
+Source Code: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/tree/main/ICP%2014/ICP%2014
 
-Wiki Page: 
+Wiki Page: https://github.com/Murarishetti-Shiva-Kumar/Big-Data-Programming/wiki/ICP-14
