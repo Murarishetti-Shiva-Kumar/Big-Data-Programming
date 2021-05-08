@@ -1,0 +1,6 @@
+county,sum(CAST(partially_vaccinated AS DOUBLE)),month(CAST(administered_date AS DATE))
+Sierra,39.0,4
+Mariposa,54.0,4
+Alpine,93.0,2
+Alpine,122.0,4
+Modoc,131.0,4

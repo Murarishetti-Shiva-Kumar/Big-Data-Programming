@@ -1,0 +1,63 @@
+county,sum(CAST(partially_vaccinated AS DOUBLE))
+Plumas,6235.0
+Kings,31618.0
+Marin,147417.0
+All CA and Non-CA Counties,15143948.0
+Inyo,6829.0
+Sonoma,232297.0
+Napa,66494.0
+Madera,45957.0
+Siskiyou,13328.0
+Ventura,333504.0
+Orange,1263071.0
+Los Angeles,3810957.0
+Sacramento,514712.0
+Lake,20545.0
+Stanislaus,181933.0
+Calaveras,16243.0
+San Diego,1372164.0
+San Francisco,440459.0
+El Dorado,66028.0
+Santa Cruz,129384.0
+Trinity,3102.0
+Santa Clara,833286.0
+San Joaquin,235509.0
+Sutter,29566.0
+Del Norte,7410.0
+Nevada,37611.0
+Yuba,15966.0
+Unknown,2901.0
+Merced,77775.0
+Yolo,92659.0
+Tehama,13144.0
+Colusa,6092.0
+Amador,15375.0
+San Benito,19878.0
+Contra Costa,549468.0
+Sierra,1296.0
+Fresno,325255.0
+Mendocino,36084.0
+San Mateo,358466.0
+Tuolumne,20297.0
+All CA Counties,14862117.0
+Modoc,2210.0
+Butte,69149.0
+Mono,6981.0
+Kern,237291.0
+Solano,161582.0
+Glenn,7901.0
+Lassen,5287.0
+Humboldt,50982.0
+Alpine,818.0
+Outside California,278930.0
+San Luis Obispo,108584.0
+Riverside,774674.0
+Imperial,53471.0
+Mariposa,4582.0
+Santa Barbara,178772.0
+Monterey,161453.0
+Shasta,42427.0
+San Bernardino,608465.0
+Alameda,725425.0
+Tulare,132589.0
+Placer,152060.0
