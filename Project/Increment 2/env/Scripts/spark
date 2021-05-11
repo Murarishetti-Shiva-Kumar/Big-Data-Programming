@@ -1,3 +1,0 @@
-#!e:\engg\master\big data programming\github repo\big-data-programming\project\increment 2\env\scripts\python.exe
-from spark import spark_admin
-spark_admin.main()
